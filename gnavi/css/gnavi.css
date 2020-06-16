@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/* CSS Document */
+h1,h4{
+    margin-left:15%;
+}
+#position_result{
+    margin-left:80%;
+}
+#space{
+    margin-top:80px;
+}
+#space2{
+    margin-bottom:80px;
+}
+#shopinfo10,#shopinfo12,#shopinfo14,#shopinfo16,#shopinfo18{
+    padding: 10px; margin-bottom: 10px; border: 5px double #333333; border-radius: 10px; background-color: #ffff99;
+}
+
+#shopinfo11,#shopinfo13,#shopinfo15,#shopinfo17,#shopinfo19{
+    padding: 10px; margin-bottom: 10px; border: 5px double #333333; border-radius: 10px;
+}
+
+#shops{
+    padding: 30px; margin-bottom: 10px; border: 5px double #333333; border-radius: 10px;
+
+    display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 250px;
+}
+
+a{
+  text-decoration: none;
+  color: #000000;
+}
+a:hover {
+  text-decoration: underline;
+  color: #9393ff;
+}
+
+.btn{
+    width: 25%;
+    margin: 0 30;
+    padding: 0.5rem 0.5rem;
+    color: #fff;
+    background: #e32f2f;
+    font-size: 1.1rem;
+    font-weight: 700;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover{
+    background-color: #f05050;
+    color: #FFF;
+}
+
+.fixed {
+  position: fixed;
+  width: 70%;
+  right:0;
+    top: 0;
+  z-index: 1000;
+  background: rgba(200,200,200,0.5);
+}

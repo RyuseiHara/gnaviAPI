@@ -1,0 +1,80 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>ぐるなびレストラン検索</title>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/script.js"></script>
+<link href="css/gnavi.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+  <h1>ぐるなび</h1>
+  <h4>現在地付近のレストラン情報を検索</h4>
+  <div id="position_result"></div>
+  </header>
+    <nav id="nav">
+    <form name='mainform' method = 'GET'>
+
+<p>
+    <b>検索範囲(半径)：</b>
+    <select id="range">
+      <option value="1">300m</option>
+      <option selected value="2">500m</option>
+      <option value="3">1000m</option>
+      <option value="4">2000m</option>
+      <option value="5">3000m</option>
+    </select>
+
+    <input type = 'text', id = 'shop_name' placeholder="お店の名前で検索">
+    <input type = 'text', id = 'freeword' placeholder="フリーワードで検索">
+        
+    <a href = "#space">
+      <input type = 'button', class ="btn" id="kensaku" value = '検索する' onclick="gnaviHanni(offset=1, hit_per_page=20);">
+    </a>
+</p>
+    </form>
+    </nav>
+
+<div id = "space">
+    <input type = 'button', value = '前の結果' onclick="gnaviHanni(offset-=hit_per_page, hit_per_page);">
+    <input type = 'button', value = '次の結果' onclick="gnaviHanni(offset+=hit_per_page, hit_per_page);">
+</div>
+　　一覧画面
+<div id = 'shops'>
+    <a href = '#shopinfo10'><div id = 'shopinfo0'></div></a>
+    <a href = '#shopinfo11'><div id = 'shopinfo1'></div></a>
+    <a href = '#shopinfo12'><div id = 'shopinfo2'></div></a>
+    <a href = '#shopinfo13'><div id = 'shopinfo3'></div></a>
+    <a href = '#shopinfo14'><div id = 'shopinfo4'></div></a>
+    <a href = '#shopinfo15'><div id = 'shopinfo5'></div></a>
+    <a href = '#shopinfo16'><div id = 'shopinfo6'></div></a>
+    <a href = '#shopinfo17'><div id = 'shopinfo7'></div></a>
+    <a href = '#shopinfo18'><div id = 'shopinfo8'></div></a>
+    <a href = '#shopinfo19'><div id = 'shopinfo9'></div></a>
+</div>
+　　詳細画面
+<div id ='shops2'>
+    <div id = 'shopinfo10'></div>
+    <div id = 'shopinfo11'></div>
+    <div id = 'shopinfo12'></div>
+    <div id = 'shopinfo13'></div>
+    <div id = 'shopinfo14'></div>
+    <div id = 'shopinfo15'></div>
+    <div id = 'shopinfo16'></div>
+    <div id = 'shopinfo17'></div>
+    <div id = 'shopinfo18'></div>
+    <div id = 'shopinfo19'></div>
+</div>
+
+<div id = "space2">
+    <a href = "#space" onclick="gnaviHanni(offset-=hit_per_page, hit_per_page);"><input type = 'button', value = '前の結果'></a>
+    <a href = "#space" onclick="gnaviHanni(offset+=hit_per_page, hit_per_page);"><input type = 'button', value = '次の結果'></a>
+</div>
+</body>
+
+<footer>
+    <a href="https://api.gnavi.co.jp/api/scope/" target="_blank">
+    <img src="https://api.gnavi.co.jp/api/img/credit/api_265_65.gif" width="265" height="65" border="0" alt="グルメ情報検索サイト　ぐるなび">
+    </a>
+</footer>
+</html>
